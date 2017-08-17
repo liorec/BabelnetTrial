@@ -92,7 +92,7 @@ public class Test4 {
         //reading file line by line in Java using BufferedReader       
         FileInputStream fis=null, emolex=null, hashtagEmolex = null;
         //FileOutputStream out = null;
-        PrintWriter out = new PrintWriter( "output.txt" );
+        PrintWriter out = new PrintWriter( "output_with_smileys.txt" );
         PrintWriter out2 = new PrintWriter( "discarded.txt" );
         PrintWriter out3 = new PrintWriter( "untranslated.txt" );
         PrintWriter out4 = new PrintWriter( "diffLang.txt" );
@@ -102,9 +102,9 @@ public class Test4 {
         int check, numberOfWords=0, discardedWords=0;
         try {
         	//out = new FileOutputStream("output.txt");
-            fis = new FileInputStream("newInput.txt");
+            fis = new FileInputStream("input2.txt");
             //emolex = new FileInputStream("emolex.txt");
-            hashtagEmolex = new FileInputStream("hashtagemolex.txt");
+            hashtagEmolex = new FileInputStream("hashtagemolex_with_smiley.txt");
             reader = new BufferedReader(new InputStreamReader(fis));
             //readerEmolex = new BufferedReader(new InputStreamReader(emolex));
             readerHashtagEmolex = new BufferedReader(new InputStreamReader(hashtagEmolex));
