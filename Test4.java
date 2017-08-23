@@ -128,7 +128,7 @@ public class Test4 {
 					numberOfWords++;
                 	//System.out.println(translatedText);
                 	String translatedText = null;
-                	emolex = new FileInputStream("emolex.txt");
+                	emolex = new FileInputStream("emolex_with_smileys.txt");
                 	hashtagEmolex = new FileInputStream("hashtagemolex.txt");
                 	readerEmolex = new BufferedReader(new InputStreamReader(emolex));
                 	lineEmolex = readerEmolex.readLine();
