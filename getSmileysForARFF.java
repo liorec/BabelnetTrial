@@ -26,7 +26,7 @@ import java.lang.*;
  *
  * @author Javin Paul
  */
-public class getSmileys { 
+public class getSmileysForARFF { 
 	
 	
 
@@ -37,7 +37,7 @@ public class getSmileys {
         //reading file line by line in Java using BufferedReader       
         FileInputStream fis=null, smileys=null, hashtagEmolex = null;
         //FileOutputStream out = null;
-        PrintWriter out = new PrintWriter( "output_with_smileys.txt" );
+        PrintWriter out = new PrintWriter( "outputARFFSmileys.txt" );
         PrintWriter out2 = new PrintWriter( "discarded.txt" );
         PrintWriter out3 = new PrintWriter( "untranslated.txt" );
         PrintWriter out4 = new PrintWriter( "diffLang.txt" );
@@ -66,13 +66,13 @@ public class getSmileys {
                 smileys = new FileInputStream("smileys.txt");
                 readerSmileys = new BufferedReader(new InputStreamReader(smileys));
             	lineSmiley = readerSmileys.readLine();
-            	
+            	int c = 141832;
             	while (lineSmiley != null) {
             	if (line.contains(lineSmiley)) {
-                out.print(" "+lineSmiley);
+                out.print(c+" 1, ");
             	}
             	
-               
+                c++;
             	
             	lineSmiley = readerSmileys.readLine();
             	}

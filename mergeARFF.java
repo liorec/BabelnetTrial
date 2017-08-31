@@ -44,22 +44,24 @@ public class mergeARFF {
     	
     	
         //reading file line by line in Java using BufferedReader       
-        FileInputStream first=null, second=null, third=null;
+        FileInputStream first=null, second=null, third=null, fourth=null;
         //FileOutputStream out = null;
-        PrintWriter out = new PrintWriter( "features.arff" );
+        PrintWriter out = new PrintWriter( "featuresWithSmileysData.arff" );
         
         
         //PrintWriter writer = new PrintWriter(new OutputStreamWriter(out));
-        BufferedReader reader1 = null, reader2 = null, reader3=null;
+        BufferedReader reader1 = null, reader2 = null, reader3=null, reader4=null;
         
            try {
         	//out = new FileOutputStream("output.txt");
             first = new FileInputStream("newEmoCount.arff");
             second = new FileInputStream("newFormat.arff");
-            third = new FileInputStream("GoldStandardEmotions.txt");
+            third = new FileInputStream("outputARFFSmileys.txt");
+            fourth = new FileInputStream("GoldStandardEmotions.txt");
             reader1 = new BufferedReader(new InputStreamReader(first));
             reader2 = new BufferedReader(new InputStreamReader(second));
             reader3 = new BufferedReader(new InputStreamReader(third));
+            reader4 = new BufferedReader(new InputStreamReader(fourth));
           
              System.out.println("Reading File line by line using BufferedReader");
           
@@ -67,13 +69,14 @@ public class mergeARFF {
             String line1;
             String line2;
             String line3;
+            String line4;
             line1 = reader1.readLine();
             line2 = reader2.readLine();
             line3 = reader3.readLine();
-            
+            line4 = reader4.readLine();
             while (line1 != null)
             {
-            	out.println("{"+line1+line2+"141832 "+line3+"}");
+            	out.println("{"+line1+line2+line3+"141962 "+line4+"}");
             	line1 = reader1.readLine();
             	line2 = reader2.readLine();
             	line3 = reader3.readLine();
